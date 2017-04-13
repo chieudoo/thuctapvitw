@@ -16,6 +16,18 @@
 #menu{
 	width: 100%;height: 50px;margin-bottom: 15px 
 }
+#slide{
+	width: 100%;height: 400px;margin-bottom: 15px;border: 1px solid #ccc;box-shadow: 1px 1px 5px 1px #ccc;z-index: 1;
+}
+#slide ul {
+	list-style: none;z-index: 0; height: 100%;width: 100%;overflow: hidden;position: relative;
+} 
+#slide ul li{
+	height: 100%;width: 100%;display: block;
+}
+#slide ul li img{
+	width: 100%;height: 100%;
+}
 #main{
 	width: 100%;height: auto;border:1px solid #ccc;
 }
@@ -35,7 +47,7 @@
 	text-align: left;font-weight: bold;padding: 0px 10px
 }
 .item span{
-	color: red;font-size: 20px;position: absolute;top: 5px;left: 5px;font-weight: bold;
+	color: #fff;font-size: 20px;position: absolute;top: 5px;left: 5px;font-weight: bold;padding: 10px;border-radius: 30px;background-color: red;font-family: Trebuchet MS,Tahoma,Verdana,Arial,sans-serif;
 }
 .item .date{
 	position: absolute;right: 10px;bottom: 15px;margin: 0;
