@@ -1,0 +1,66 @@
+<div class="col-sm-12 col-md-12 col-lg-12">
+	<p><a href="#/"><i class="fa fa-home"></i> HOME </a> -- <a href="#/tinh-cam">{{item.category}}</a> -- <label>{{item.name}}</label></p>
+	<hr>
+</div>
+<div class="col-sm-3 col-md-3 col-lg-3">
+	<img ng-src="{{item.image}}">
+</div>
+<div class="col-sm-5 col-md-5 col-lg-5">
+	<h4>{{item.name}}</h4>
+	<label>{{item.lable}}</label>
+	<h5>{{item.status}}</h5>
+	<p class="price">Giá : {{item.price | currency }}</p>
+	<p class="date">Ngày Cập Nhập : {{ item.pubdate | date}}</p>
+	<p>{{item.description}}</p>
+	<button type="button" class="btn btn-primary" ng-click="btnLike()" ng-disabled="show">Like</button>
+	<button type="button" class="btn btn-default" id="btn_buy" ng-click="btnBuy()">BUY</button>
+</div>
+<div class="col-sm-4 col-md-4 col-lg-4">
+	<form name="myForm" role="form" ng-if="frmBuy">
+		<legend style="text-align: center;">Đặt Mua Hàng</legend>
+
+		<div class="form-group">
+			<label>Số Lượng</label>
+			<input type="number" min="1" name="sl" required value="{{num}}" ng-model="num" class="form-control" ng-change="quantity(num)">
+		</div>
+		<div class="form-group">
+			<label>Thành Tiền : {{quanti | currency}}</label>
+		</div>
+		<div class="form-group">
+			<label>Tên Khách Hàng</label>
+			<input type="text" name="tenkh" ng-model="tenkh" class="form-control" placeholder="Input field" required>
+		</div>
+		<div class="alert alert-danger" ng-show="myForm.tenkh.$touched && myForm.tenkh.$invalid">
+			<strong>Title!</strong> Alert body ...
+		</div>
+		<div class="form-group">
+			<label>Số Điện Thoại</label>
+			<input type="text" name="sdt" ng-model="sdt" class="form-control" placeholder="Input field" required>
+		</div>
+		<div class="alert alert-danger" ng-show="myForm.sdt.$touched && myForm.sdt.$invalid">
+			<strong>Title!</strong> Alert body ...
+		</div>
+		<div class="form-group">
+			<label>Email</label>
+			<input type="email" name="email" ng-model="email" class="form-control" placeholder="Input field" required>
+		</div>
+		<div class="alert alert-danger" ng-show="myForm.email.$touched && myForm.email.$invalid">
+			<strong>Title!</strong> Alert body ...
+		</div>
+		<div class="form-group">
+			<label>Địa Chỉ</label>
+			<textarea class="form-control" name="diachi" ng-model="diachi" required></textarea>
+		</div>
+		<div class="alert alert-danger" ng-show="myForm.diachi.$touched && myForm.diachi.$invalid">
+			<strong>Title!</strong> Alert body ...
+		</div>
+	
+		
+	
+		<button type="submit" class="btn btn-primary">Mua</button>
+	</form>
+</div>
+<div class="col-sm-8 col-md-8 col-lg-8">
+<hr>
+	{{item.content}}
+</div>

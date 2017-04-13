@@ -4,8 +4,9 @@
 .img{
 	width: 200px;height:150px;
 }
+.clearfix{clear: both;}
 #header{
-	width: 100%;height: 100px;border-bottom: 1px solid #ccc;
+	width: 100%;height: 100px;display: block;
 }
 .icon-logo{
 	width: 100px;height: 100%;float: left;
@@ -14,10 +15,22 @@
 	font-family: Trebuchet MS,Tahoma,Verdana,Arial,sans-serif;width: 200px;float: left;padding: 0px 5px
 }
 #menu{
-	width: 100%;height: 50px;margin-bottom: 15px 
+	width: 100%;height: 50px;margin-bottom: 15px ;display: block;
+}
+#slide{
+	width: 100%;margin-bottom: 15px;border: 1px solid #ccc;box-shadow: 1px 1px 5px 1px #ccc;z-index: 1;display: block;
+}
+#slide ul {
+	list-style: none;z-index: 0; height: 400px;width: 100%;overflow: hidden;position: relative;margin: 0
+} 
+#slide ul li{
+	height: 100%;width: 100%;display: block;
+}
+#slide ul li img{
+	width: 100%;height: 100%;
 }
 #main{
-	width: 100%;height: auto;border:1px solid #ccc;
+	width: 100%;height: auto;border:1px solid #ccc;display: block;
 }
 .item{
 	height: 400px;border:1px solid #ccc;border-radius: 5px;box-shadow: 1px 3px 1px #ccc;position: relative;margin: 15px 0px
@@ -35,8 +48,32 @@
 	text-align: left;font-weight: bold;padding: 0px 10px
 }
 .item span{
-	color: red;font-size: 20px;position: absolute;top: 5px;left: 5px;font-weight: bold;
+	color: #fff;font-size: 20px;position: absolute;top: 5px;left: 5px;font-weight: bold;padding: 10px;border-radius: 30px;background-color: red;font-family: Trebuchet MS,Tahoma,Verdana,Arial,sans-serif;
 }
 .item .date{
 	position: absolute;right: 10px;bottom: 15px;margin: 0;
+}
+#footer{
+	margin-top: 15px;width: 100%;height: 100%;display: block;
+}
+#footer .f_title{
+	margin-bottom: 25px;
+}
+#footer .contact img{
+	border: 1px solid #ccc;height: 130px;margin: 0px 63px;background-color: rgba(0,0,0,0.3);
+}
+#footer .social_1{
+	list-style: none;
+}
+#footer .social_2{
+	list-style: none;
+}
+.social_1 li{
+	display: inline-block;padding: 6px 14px;border: 1px solid #ccc;background-color: #ccc;margin:10px 3px 0px;
+}
+.social_2 li{
+	display: inline-block;padding: 6px 14px;border: 1px solid #ccc;background-color: #ccc;margin:5px 3px;
+}
+#footer .tab-pane{
+	border: 1px solid #ccc; border-top: none;
 }
